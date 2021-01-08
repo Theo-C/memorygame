@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr" id="html">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <title>Memory Game</title>
+    </head>
+
+    <body>
+
+        <div class="game-container">
+            <div class="game-info-container">
+                <div class="game-info">
+                  <p>Temps : </p> <p id="countdown">60</p>
+                </div>
+                <div class="game-info">
+                   <p>Nb coup :</p> <p id="nbCoup">0</p>
+                </div>
+                <div class="game-info">
+                    <a mat-raised-button color="primary" (click)="randomPositionShuffle()">Mélange</a>
+                </div>
+
+
+            <div class="game-info">
+                <!--<button class="btn btn-primary">Mode Hardcore</button>-->
+            </div>
+            </div>
+
+                             <!-- CREATION DES CARTES DE JEU -->
+
+            <div class="card" data-framework="terre" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\terre.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="mercure" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\mercure.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="terre" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\terre.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="mercure" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\mercure.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="mars" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\mars.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="jupiter" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\jupiter.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="mars" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\mars.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="jupiter" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\jupiter.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="uranus" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\uranus.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="saturne" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\saturne.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="uranus" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\uranus.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="saturne" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\saturne.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="neptune" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\neptune.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="venus" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\venus.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="neptune" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\neptune.gif">
+                 </div>
+            </div>
+
+            <div class="card" data-framework="venus" #cards [style.order]=randomPosition()>
+                <div class="front-face">
+                    <img class="image" src="..\assets\img\defaultcard.jpg">
+                </div>
+                <div class="back-face">
+                    <img class="image" src="..\assets\img\venus.gif">
+                 </div>
+            </div>
+         </div>
+         <div id ="boxwin">
+            <span class="material-icons">done_all</span>
+                 <h1>Victoire!</h1>
+             <a onclick="replayalertwin()" class="replay">Rejouer</a>
+             <a onclick="closealertwin()" class="close">Fermer</a>
+         </div>
+
+         <div id ="boxlose">
+            <span class="material-icons">clear</span>
+                 <h1>Défaite!</h1>
+             <a onclick="replayalertlose()" class="replay">Rejouer</a>
+             <a onclick="closealertlose()" class="close">Fermer</a>
+         </div>
+      
+    </body>
+    
+</html>

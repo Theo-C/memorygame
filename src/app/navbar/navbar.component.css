@@ -1,0 +1,127 @@
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.mat-icon {
+    margin-left: 10px;
+}
+
+.memorygame {
+    margin-left: 15px;
+}
+
+
+.classement {
+    margin-right: 10px;
+}
+
+.difficulty {
+    margin-right: 10px;
+}
+
+.newgame {
+    margin-right: 15px;
+}
+
+ #boxclassement{
+    width: 500px;
+    overflow: hidden;
+    background: #f1f1f1;
+    box-shadow: 0 0 20px black;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+#box span {
+    color: #2ecc71;
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+}
+
+#box h1{
+    color: #333;
+}
+
+.close {
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #3498db;
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.closeClear {
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #ca0d0d;
+    display: inline-block;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.replay {
+    font-size: 18px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #34db5e;
+    display: inline-block;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+  
+  .content-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #ee790b;
+  }
+  

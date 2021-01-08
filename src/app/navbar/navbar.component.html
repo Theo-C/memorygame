@@ -1,0 +1,49 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- refer css-->
+
+<mat-toolbar color="primary">
+    <mat-icon routerLink="">games</mat-icon> <span class="memorygame" routerLink="">Memory Game</span>
+
+    <div class="spacer"></div>
+
+    <a mat-raised-button color="accent" class="newgame" (click)="reset()">Nouvelle partie</a>
+    
+    <a mat-button class="difficulty" (click)="difficult()">Difficulté</a>
+
+    <a mat-button class="classement" (click)="displayClassement()">Classement</a>
+
+</mat-toolbar>
+
+
+
+<div id="boxclassement"> <!-- Classement -->
+         <h1>Classement :</h1>
+         <hr>
+         <br>
+         <table class="content-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Temps</th>
+                <th>Nb coup</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="active-row" *ngFor="let p of rankingFilter;let i = index " >
+                <td>{{i+1}}</td>
+                <td>{{rankingFilter[i].score}}</td>
+                <td>{{rankingFilter[i].time}}</td>
+                <td>{{rankingFilter[i].nb_coup}}</td>
+            </tr>
+        </tbody>
+
+            </table>
+
+
+     <a (click)="closealertlose()" class="close">Fermer</a>
+     <a (click)="clearRanking()" class="closeClear">Vider le ranking</a>
+ </div>
+
+
+
+
